@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.1.1/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body style="margin: 0px; overflow: hidden;">
+    <a-scene
+      embedded
+      arjs="trackingMethod: gps; sourceType: webcam; debugUIEnabled: false;"
+    >
+      <!-- نموذج ثلاثي الأبعاد يظهر عند الوصول إلى الموقع -->
+      <a-entity
+        gps-entity-place="latitude: 30.826588; longitude: 27.639844;"
+        gltf-model="https://doahmed123.github.io/my-frist-project/model.gltf"
+        scale="1 1 1"
+        animation-mixer
+      ></a-entity>
+
+      <!-- إعدادات البيئة -->
+      <a-light type="ambient" intensity="1"></a-light>
+    </a-scene>
+  </body>
+</html>
